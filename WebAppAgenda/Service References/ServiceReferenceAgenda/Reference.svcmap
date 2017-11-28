@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5b5447d8-68d8-4d2f-9d63-448804fc1347" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:6812/ServiceMyAgenda.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceMyAgenda.disco" MetadataType="Disco" ID="a97dfe19-e335-45da-bcd9-28a93e18d9a6" SourceId="1" SourceUrl="http://localhost:6812/ServiceMyAgenda.svc?disco" />
+    <MetadataFile FileName="ServiceMyAgenda.xsd" MetadataType="Schema" ID="bed19a94-1093-41a3-80cf-bcd439adedaa" SourceId="1" SourceUrl="http://localhost:6812/ServiceMyAgenda.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceMyAgenda1.xsd" MetadataType="Schema" ID="48ae0056-1fe5-4536-9af3-2f7403013e08" SourceId="1" SourceUrl="http://localhost:6812/ServiceMyAgenda.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceMyAgenda2.xsd" MetadataType="Schema" ID="33377cd2-7bac-4216-9978-a4a23359eb2b" SourceId="1" SourceUrl="http://localhost:6812/ServiceMyAgenda.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceMyAgenda.wsdl" MetadataType="Wsdl" ID="bfe88490-4653-4e20-b43a-e2dc3b7ba1bf" SourceId="1" SourceUrl="http://localhost:6812/ServiceMyAgenda.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

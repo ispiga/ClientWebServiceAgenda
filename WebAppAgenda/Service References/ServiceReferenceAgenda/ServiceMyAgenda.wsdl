@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceMyAgenda" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:6812/ServiceMyAgenda.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:6812/ServiceMyAgenda.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:6812/ServiceMyAgenda.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceMyAgenda_NuevoContacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:NuevoContacto" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMyAgenda_NuevoContacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NuevoContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMyAgenda_EditarContacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditarContacto" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMyAgenda_EditarContacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditarContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMyAgenda_ElimirarContacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:ElimirarContacto" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMyAgenda_ElimirarContacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ElimirarContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMyAgenda_BuscarContacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarContacto" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMyAgenda_BuscarContacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMyAgenda_MostrarContactos_InputMessage">
+    <wsdl:part name="parameters" element="tns:MostrarContactos" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMyAgenda_MostrarContactos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MostrarContactosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceMyAgenda">
+    <wsdl:operation name="NuevoContacto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMyAgenda/NuevoContacto" message="tns:IServiceMyAgenda_NuevoContacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMyAgenda/NuevoContactoResponse" message="tns:IServiceMyAgenda_NuevoContacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditarContacto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMyAgenda/EditarContacto" message="tns:IServiceMyAgenda_EditarContacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMyAgenda/EditarContactoResponse" message="tns:IServiceMyAgenda_EditarContacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ElimirarContacto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMyAgenda/ElimirarContacto" message="tns:IServiceMyAgenda_ElimirarContacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMyAgenda/ElimirarContactoResponse" message="tns:IServiceMyAgenda_ElimirarContacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarContacto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMyAgenda/BuscarContacto" message="tns:IServiceMyAgenda_BuscarContacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMyAgenda/BuscarContactoResponse" message="tns:IServiceMyAgenda_BuscarContacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarContactos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMyAgenda/MostrarContactos" message="tns:IServiceMyAgenda_MostrarContactos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMyAgenda/MostrarContactosResponse" message="tns:IServiceMyAgenda_MostrarContactos_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceMyAgenda" type="tns:IServiceMyAgenda">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NuevoContacto">
+      <soap:operation soapAction="http://tempuri.org/IServiceMyAgenda/NuevoContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarContacto">
+      <soap:operation soapAction="http://tempuri.org/IServiceMyAgenda/EditarContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ElimirarContacto">
+      <soap:operation soapAction="http://tempuri.org/IServiceMyAgenda/ElimirarContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarContacto">
+      <soap:operation soapAction="http://tempuri.org/IServiceMyAgenda/BuscarContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarContactos">
+      <soap:operation soapAction="http://tempuri.org/IServiceMyAgenda/MostrarContactos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceMyAgenda">
+    <wsdl:port name="BasicHttpBinding_IServiceMyAgenda" binding="tns:BasicHttpBinding_IServiceMyAgenda">
+      <soap:address location="http://localhost:6812/ServiceMyAgenda.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
